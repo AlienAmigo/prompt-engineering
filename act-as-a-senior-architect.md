@@ -1,12 +1,12 @@
 ---
-title: Как использовать промпт "Act as a senior React Native architect"
+title: Как использовать промпт "Act as a senior architect"
 tags: [ai, prompting, react-native, architecture, deepseek, best-practices]
 created: 2025-04-05
 updated: 2025-04-05
 status: published
 ---
 
-# Act as a Senior React Native Architect — шаблоны и лучшие практики
+# Act as a Senior Architect — шаблоны и лучшие практики
 
 > 📌 Эта шпаргалка поможет вам эффективно использовать ИИ (например, Deepseek) для архитектурного проектирования в React Native.
 > Основана на технике **Role Prompting** и адаптирована под русскоязычных разработчиков.
@@ -28,7 +28,7 @@ status: published
 
 ## Описание
 
-Фраза «Act as a senior React Native architect...» — это пример **ролевого промптинга** (Role Prompting), мощной техники, позволяющей направить ИИ на выдачу более качественных, структурированных и профессиональных ответов.
+Фраза «Act as a senior architect...» — это пример **ролевого промптинга** (Role Prompting), мощной техники, позволяющей направить ИИ на выдачу более качественных, структурированных и профессиональных ответов.
 
 Вместо простого запроса «напиши компонент» вы задаёте модельке **роль, уровень экспертизы и контекст**, что активирует соответствующие «знания» из её обучающих данных.
 
@@ -91,7 +91,7 @@ Act as a senior React Native architect.
 
 ### Пример 2: Рефакторинг компонента
 
-```text
+````text
 Act as a senior React Native architect specializing in performance.
 
 **Контекст:** Проект на RN 0.72, TypeScript, Redux.
@@ -133,7 +133,7 @@ Act as a senior React Native architect.
 4. Напиши код очистки стора и persist
 
 Учти, что мы используем `persistReducer`.
-```
+````
 
 ---
 
@@ -225,7 +225,7 @@ RN 0.68 ≠ 0.73 — разный подход к CLI, Metro, New Architecture.
 
 Если вы используете API или чат без поддержки прикрепления файлов, вставьте ключевые фрагменты прямо в промпт:
 
-```text
+````text
 **Фрагменты проекта:**
 - `package.json` (важные зависимости)
 - `tsconfig.json` (настройки TS, path aliases)
@@ -237,15 +237,20 @@ RN 0.68 ≠ 0.73 — разный подход к CLI, Metro, New Architecture.
 Файл: `features/orders/api/ordersApi.ts`
 ```ts
 // ... важные места (типы, endpoints, baseQuery) ...
-```
+````
 
 Файл: `features/orders/history/OrdersHistoryScreen.tsx`
+
 ```tsx
 // ... текущая версия экрана или проблемный фрагмент ...
 ```
 
 Дальше попроси:
+
 1. Сначала перечислить, каких данных не хватает (если не хватает)
 2. Затем предложить план изменений
 3. Только после этого — дать код
+
+```
+
 ```
